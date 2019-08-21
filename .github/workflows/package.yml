@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+    tags:
+    - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Create GitHub Release
+      uses: smarkup/Github-Release-Action@master
+      with:
+        args: -a README.md.zip -m "Release of the tag $GITHUB_REF" $GITHUB_REF
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_USER: ${{ github.actor }}
+        GITHUB_REF: ${{ github.ref }}
