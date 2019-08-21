@@ -11,6 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+      if: startsWith(github.ref, 'refs/tags/')
     - name: Create GitHub Release
       uses: smarkup/Github-Release-Action@master
       env:
