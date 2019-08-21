@@ -2,8 +2,6 @@ name: CI
 
 on:
   push:
-    branches:
-    - master
     tags:
     - '*'
 
@@ -16,7 +14,7 @@ jobs:
     - name: Create GitHub Release
       uses: smarkup/Github-Release-Action@master
       with:
-        args: -a README.md.zip -m $GITHUB_REF $GITHUB_REF
+        args: -a README.md.zip -m "$GITHUB_REF" "$GITHUB_REF"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_USER: ${{ github.actor }}
