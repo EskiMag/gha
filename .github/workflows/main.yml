@@ -42,6 +42,7 @@ jobs:
   create_deployment:
     runs-on: ubuntu-16.04
     steps:
+    - uses: actions/checkout@v1
     - name: Create Deployment
       uses: ./.github/actions/github-create-deployment
       env:
