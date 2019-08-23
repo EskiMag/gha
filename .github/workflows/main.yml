@@ -3,8 +3,8 @@ name: CI
 on:
   delete:
     branches:
-    - 'refs/heads/*'
-    - '!refs/heads/master'
+    - '*'
+    - '!master'
 
 jobs:
   dump:
