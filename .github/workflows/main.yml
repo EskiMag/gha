@@ -3,8 +3,7 @@ name: CI
 on:
   delete:
     branches:
-    - '*'
-    - '!refs/tags/*'
+    - 'refs/heads/*'
 
 jobs:
   build:
