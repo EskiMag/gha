@@ -4,6 +4,7 @@ on:
   delete:
     branches:
     - '*'
+    - '!refs/tags/*'
 
 jobs:
   build:
