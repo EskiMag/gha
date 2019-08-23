@@ -5,6 +5,10 @@ on:
     branches:
     - '*'
     - '!master'
+  push:
+    branches:
+    - '*'
+
 
 jobs:
   dump:
@@ -34,8 +38,3 @@ jobs:
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
         run: echo "$STEPS_CONTEXT"
-
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo Hello, World!
