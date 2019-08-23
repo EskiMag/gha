@@ -11,5 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo Hello, World!
+    - run: echo "\$GITHUB_REF=$GITHUB_REF"
+      env:
+        GITHUB_REF: ${{ github.ref }}
       
