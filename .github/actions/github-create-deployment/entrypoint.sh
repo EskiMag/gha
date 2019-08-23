@@ -4,10 +4,9 @@ set -eu
 
 echo "hub api -X POST repos/$GITHUB_REPOSITORY/deployments -F ref=$GITHUB_REF description=\"$DEPLOYMENT_DESCRIPTION\""
 
-JSON=$(hub api -X POST "repos/$GITHUB_REPOSITORY/deployments" \
-  -F ref=$GITHUB_REF \
-  required_contexts="[]" \
-  description=$DEPLOYMENT_DESCRIPTION)
+JSON=$(hub api -X POST "repos/$GITHUB_REPOSITORY/deployments" -F ref=$GITHUB_REF description=$DEPLOYMENT_DESCRIPTION)
+
+echo $JSON
 
 STATUSES_URL=$(echo $JSON | jq '.statuses_url')
 
