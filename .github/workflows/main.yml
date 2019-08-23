@@ -4,7 +4,7 @@ on:
   delete:
     branches:
     - 'refs/heads/*'
-    - '!refs/tags/*'
+    - '!refs/heads/master'
 
 jobs:
   dump:
