@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  delete:
+    branches:
+    - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: Hello, World!
+      
