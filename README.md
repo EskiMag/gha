@@ -1,3 +1,3 @@
 # github-actions-playground
 
-* bla
+* blabla
