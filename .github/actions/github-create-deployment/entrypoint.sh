@@ -2,6 +2,8 @@
 
 set -eu
 
+echo "hub api -X POST repos/$GITHUB_REPOSITORY/deployments -F ref=$GITHUB_REF description=\"$DEPLOYMENT_DESCRIPTION\""
+
 hub api -X POST "repos/$GITHUB_REPOSITORY/deployments" \
   -F ref=$GITHUB_REF \
   description=$DEPLOYMENT_DESCRIPTION
