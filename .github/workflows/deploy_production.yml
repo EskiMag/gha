@@ -1,6 +1,7 @@
 name: CI
 
-on: tag
+on: 
+  create: tag
     
 jobs:
   deploy_to_production:
