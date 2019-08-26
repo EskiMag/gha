@@ -1,7 +1,9 @@
 name: CI
 
 on: 
-  create: tag
+  create:
+    tags:
+    - '*'
     
 jobs:
   deploy_to_production:
