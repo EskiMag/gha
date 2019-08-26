@@ -3,8 +3,9 @@ name: CI
 on:
   push:
     branches:
-    - '*'
-    - '!master'
+      - "*"
+      - "!refs/tags/*"
+      - "!master"
 
 jobs:
   review_update:
@@ -16,7 +17,6 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-
   # create_deployment:
   #   runs-on: ubuntu-16.04
   #   steps:
@@ -29,4 +29,3 @@ jobs:
   #       GITHUB_REPOSITORY: ${{ github.repository }}
   #       GITHUB_REF: ${{ github.sha }}
   #       DEPLOYMENT_DESCRIPTION: ${{ github.event.head_commit.message }}
-        

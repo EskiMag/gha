@@ -3,8 +3,9 @@ name: CI
 on:
   delete:
     branches:
-    - '*'
-    - '!master'
+      - "*"
+      - "!refs/tags/*"
+      - "!master"
 
 jobs:
   review_stop:
