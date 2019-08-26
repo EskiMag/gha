@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - '!master'
+
+jobs:
+  dump:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Review Start
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+  # create_deployment:
+  #   runs-on: ubuntu-16.04
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Create Deployment
+  #     uses: ./.github/actions/github-create-deployment
+  #     env:
+  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       GITHUB_USER: ${{ github.actor }}
+  #       GITHUB_REPOSITORY: ${{ github.repository }}
+  #       GITHUB_REF: ${{ github.sha }}
+  #       DEPLOYMENT_DESCRIPTION: ${{ github.event.head_commit.message }}
+        
