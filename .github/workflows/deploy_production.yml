@@ -3,7 +3,7 @@ name: CI
 on: tag
     
 jobs:
-  dump:
+  deploy_to_production:
     runs-on: ubuntu-16.04
     steps:
       - name: Deploy to Production

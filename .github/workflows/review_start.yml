@@ -6,7 +6,7 @@ on:
     - '!master'
 
 jobs:
-  dump:
+  review_start:
     runs-on: ubuntu-16.04
     steps:
       - name: Review Start
