@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - name: Review Start
+        run: echo Review Start
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}

@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - name: Deploy to Staging
+        run: echo Deploy to Staging
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
