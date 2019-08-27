@@ -3,7 +3,9 @@ name: CI
 on:
   push:
     branches:
-    - 'master'
+      - "master"
+    tags:
+      - "!refs/tags/*"
 
 jobs:
   deploy_to_staging:
