@@ -32,3 +32,19 @@ Workflows should run only in a case specified above and not in other cases.
 # Notes
 
 Both **`review_start`** and **`review_update`** workflows went through various versions of the `trigger` statement. It's just one of versions I tried.
+
+# Test
+
+```shell
+BRANCH_NAME=new-branch-$(date +%Y%m%d%H%M%S)
+git checkout -b $BRANCH_NAME
+echo "hello world" >> README.md
+git commit -a -m "commit to a feature branch"
+git push
+git checkout master
+git merge $BRANCH_NAME
+git branch -D $BRANCH_NAME
+git push origin --delete feature/login
+git tag -a tag-$(date +%Y%m%d%H%M%S) -m ""
+git push --tags
+```hello world
