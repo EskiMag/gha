@@ -2,10 +2,8 @@ name: CI
 
 on:
   create:
-    tags:
-      - 'refs/tags/*'
-      - '!refs/heads/*'
     branches:
+      - 'refs/tags/*'
       - '!refs/heads/*'
 
 jobs:
