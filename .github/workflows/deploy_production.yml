@@ -4,6 +4,7 @@ on:
   create:
     tags:
       - 'refs/tags/*'
+      - '!refs/heads/*'
     branches:
       - '!refs/heads/*'
 
