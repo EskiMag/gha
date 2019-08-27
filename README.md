@@ -35,10 +35,12 @@ Both **`review_start`** and **`review_update`** workflows went through various v
 
 # Test
 
+After running this script exactly 5 new workflows should be run in Actions. Each one just once.
+
 ```shell
 BRANCH_NAME=new-branch-$(date +%Y%m%d%H%M%S)
 git checkout -b $BRANCH_NAME
-echo "hello world" >> README.md
+echo "hello world" >> test.txt
 git commit -a -m "commit to a feature branch"
 git push
 git checkout master
@@ -47,4 +49,5 @@ git branch -D $BRANCH_NAME
 git push origin --delete $BRANCH_NAME
 git tag -a tag-$(date +%Y%m%d%H%M%S) -m ""
 git push --tags
-```hello world
+```
+
