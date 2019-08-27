@@ -41,6 +41,7 @@ After running this script exactly 5 new workflows should be run in Actions. Each
 BRANCH_NAME=new-branch-$(date +%Y%m%d%H%M%S)
 git checkout -b $BRANCH_NAME
 echo "hello world" >> test.txt
+git add test.txt
 git commit -a -m "commit to a feature branch"
 git push
 git checkout master
