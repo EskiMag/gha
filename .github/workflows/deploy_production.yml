@@ -3,9 +3,9 @@ name: CI
 on:
   create:
     tags:
-      - "refs/tags/*"
+      - 'refs/tags/*'
     branches:
-      - "!*"
+      - '!*'
 
 jobs:
   deploy_to_production:

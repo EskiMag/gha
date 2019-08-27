@@ -3,10 +3,10 @@ name: CI
 on:
   delete:
     branches:
-      - "refs/heads/*"
-      - "!master"
+      - 'refs/heads/*'
+      - '!master'
     tags:
-      - "!refs/tags/*"
+      - '!refs/tags/*'
 
 jobs:
   review_stop:
