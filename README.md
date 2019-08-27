@@ -44,7 +44,7 @@ git push
 git checkout master
 git merge $BRANCH_NAME
 git branch -D $BRANCH_NAME
-git push origin --delete feature/login
+git push origin --delete $BRANCH_NAME
 git tag -a tag-$(date +%Y%m%d%H%M%S) -m ""
 git push --tags
 ```hello world
