@@ -3,6 +3,9 @@ name: CI
 on:
   create:
     branches:
+      - '*'
+    tags:
+      - '!*'
 
 jobs:
   review_start:
