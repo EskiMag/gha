@@ -31,4 +31,29 @@ Workflows should run only in a case specified above and not in other cases.
 
 # Notes
 
+<<<<<<< HEAD
 Both **`review_start`** and **`review_update`** workflows went through various versions of the `trigger` statement. It's just one of versions I tried.bla
+=======
+Both **`review_start`** and **`review_update`** workflows went through various versions of the `trigger` statement. It's just one of versions I tried.
+
+# Test
+
+After running this script exactly 5 new workflows should be run in Actions. Each one just once.
+
+```shell
+BRANCH_NAME=new-branch-$(date +%Y%m%d%H%M%S)
+git checkout -b $BRANCH_NAME
+git push
+echo "hello world" >> test.txt
+git add test.txt
+git commit -a -m "commit to a feature branch"
+git push
+git checkout master
+git merge $BRANCH_NAME
+git branch -D $BRANCH_NAME
+git push origin --delete $BRANCH_NAME
+git tag -a tag-$(date +%Y%m%d%H%M%S) -m ""
+git push --tags
+```
+
+>>>>>>> 645bd51c63aaf087b51c5276eada712a13b73285
