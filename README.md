@@ -31,4 +31,4 @@ Workflows should run only in a case specified above and not in other cases.
 
 # Notes
 
-Both **`review_start`** and **`review_update`** workflows went through various versions of the `trigger` statement. It's just one of versions I tried.
+Both **`review_start`** and **`review_update`** workflows went through various versions of the `trigger` statement. It's just one of versions I tried.bla
