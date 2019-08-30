@@ -1,9 +1,7 @@
 name: CI
 
 on:
-  create:
-    branches:
-      - 'refs/heads/*'
+  create: [:branches]
 
 jobs:
   review_start:
