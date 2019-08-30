@@ -4,8 +4,6 @@ on:
   create:
     branches:
       - 'refs/heads/*'
-      - '!master'
-      - '!refs/tags/*'
 
 jobs:
   review_start:
