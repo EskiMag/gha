@@ -3,7 +3,6 @@ name: CI
 on:
   create:
     branches:
-      - 'refs/heads/*'
 
 jobs:
   review_start:
