@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     tags:
-      - 'refs/tags/*'
+      - '*'
 
 jobs:
   deploy_to_production:

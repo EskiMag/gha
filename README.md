@@ -47,8 +47,9 @@ git commit -a -m "commit to a feature branch"
 git push
 git checkout master
 git merge $BRANCH_NAME
+git push
 git branch -D $BRANCH_NAME
-sleep 20
+sleep 30
 git push origin --delete $BRANCH_NAME
 git tag -a tag-$(date +%Y%m%d%H%M%S) -m ""
 git push --tags
