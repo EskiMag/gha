@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  create:
+    ref_type: tag
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Tag Created
+        run: echo "Tag ${{ github.ref }} created"
